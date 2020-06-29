@@ -59,7 +59,5 @@ module.exports = function(sequelize, DataTypes) {
         return userData;
     }
 
+    return user;
 };
-
-// remove password setup before add
-// return user model
