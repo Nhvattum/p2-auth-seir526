@@ -3,8 +3,7 @@ const router = express.Router();
 const db = require('../models');
 // import middleware
 const flash = require('flash');
-// TODO: update require below to passport config path
-const passport;
+const passport = require('../config/ppConfig');
 
 // register get route
 router.get('/register', function(req, res) {
@@ -56,7 +55,7 @@ router.post('/login', function(req, res, next) {
         if (error) {
             return next(error);
         }
-        
+
         req.login(function(user, error) {
             // if error move to error
             if (error) next(error);
