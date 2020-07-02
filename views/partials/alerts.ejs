@@ -1,5 +1,5 @@
 <% if (alerts.error) { %>
-    <% alerts.err.forEach(function(message) { %>
+    <% alerts.error.forEach(function(message) { %>
         <div style="background-color: red; color: white;">
             <%= message %>
         </div>
@@ -12,3 +12,6 @@
         </div>
     <% }) %>
 <% } %>
+<script>
+    console.log(alerts)
+</script>
